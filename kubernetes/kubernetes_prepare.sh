@@ -5,6 +5,10 @@
 
 test=$1
 
+yum -y update
+yum -y install epel-release
+yum -y install nano htop
+
 # Create user with home folder
 useradd kubernetes
 # Check if string is empty for setting password immediately
