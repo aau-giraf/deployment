@@ -6,7 +6,7 @@ Syntax:
 ```
 curl -L "https://gitlab.giraf.cs.aau.dk/tools/deployment/raw/master/kubernetes/kubernetes_prepare.sh" -s -O && chmod +x kubernetes_prepare.sh && ./kubernetes_prepare.sh PASSWORD && cd /home/kubernetes
 ```
-Replace PASSWORD to inject the password for the kubernetes user, if you remove the parameter then you'll be prompted to enter a password.
+Replace PASSWORD to inject the password for the kubernetes user, if you remove the argument then you'll be prompted to enter a password.
 ## Deployment
 The deployment script itself needs some parameters. They can be entered using either
 ```--master=true``` or ```--master true```.
