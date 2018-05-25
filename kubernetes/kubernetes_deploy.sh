@@ -242,9 +242,10 @@ systemctl stop firewalld
 
 # Install docker, NFS client
 yum -y install docker nfs-utils glusterfs-fuse
+
 systemctl enable docker
 systemctl start docker
-
+modprobe dm_snapshot && modprobe dm_thin_pool && modprobe dm_mirror
 # Import kubernetes repo
 cat <<EOF > /etc/yum.repos.d/kubernetes.repo
 [kubernetes]
